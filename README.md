@@ -5,4 +5,4 @@ Using a specific extension and a string with a search value you could search for
 
 ## Example: node search.js html user
 
-This would search all the js files that contain the string 'user' (the search is case-insensitive). 
+This would search all the html files that contain the string 'user' (the search is case-insensitive). 
