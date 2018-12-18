@@ -27,12 +27,11 @@ function searchFilesInDir(__dirname, extension, str) {
         var stat = fs.lstatSync(fileFullPath); //file status
         if (stat.isDirectory()) {
             searchFilesInDir(fileFullPath, extension, str); //works recursively - goes into subdirectory
-        }
-        else {
-        	var fileName = fileFullPath.split('\\').pop().split('.').shift(); //without entire path & extension
-        	if (path.extname(fileFullPath) === extension && fileName.search(regex) != -1) {
-            	results.push(fileFullPath);
-        	}
+        } else {
+	    var fileName = fileFullPath.split('\\').pop().split('.').shift(); //without entire path & extension
+	    if (path.extname(fileFullPath) === extension && fileName.search(regex) != -1) {
+	        results.push(fileFullPath);
+	    }
         };
     });
 };
